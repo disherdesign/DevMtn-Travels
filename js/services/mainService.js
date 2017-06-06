@@ -1,4 +1,23 @@
 angular.module('devmtnTravel').service('mainSrv', function(){
+	this.getPackages = function(country) 	{
+		var arr = [];
+		for (var package of this.packageInfo) {
+			if(package.country === country){
+				arr.push(package);
+			}
+
+		}
+		return arr;
+	}
+
+	this.getID = function(id) {
+		var arr = [];
+		for (var package of this.packageInfo) {
+			if (package.id === id);
+				arr.push(package);
+			}
+	}
+
     this.travelInfo = [{
         country: 'United States',
         image: "../img/US.jpg",
